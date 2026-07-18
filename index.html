@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Velora Squad - Innovating across Web Development, AI, Mobile Apps, Cloud & DevOps">
+    <meta name="keywords" content="web development, AI, machine learning, mobile apps, cloud services">
+    <title>Velora Squad - Innovating Across Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-rocket"></i> Velora Squad
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Velora Squad</h1>
+                <p>Innovating Across Web, AI, Mobile & Cloud Technologies</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">View Portfolio</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card" style="animation-delay: 0s;">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-card" style="animation-delay: 1s;">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="floating-card" style="animation-delay: 2s;">
+                    <i class="fas fa-cloud"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">We deliver cutting-edge solutions across multiple domains</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, scalable, and beautiful web applications with modern frameworks like React, Vue, and Next.js.</p>
+                    <ul>
+                        <li>React & Vue.js</li>
+                        <li>Next.js & Svelte</li>
+                        <li>Progressive Web Apps</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Creating intelligent systems, chatbots, and ML solutions using TensorFlow, PyTorch, and advanced NLP models.</p>
+                    <ul>
+                        <li>Deep Learning</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Cross-platform and native mobile apps for iOS and Android using React Native, Flutter, and Swift.</p>
+                    <ul>
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>Native Development</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Scalable cloud infrastructure and DevOps solutions on AWS, Google Cloud, and Azure platforms.</p>
+                    <ul>
+                        <li>AWS & Google Cloud</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>CI/CD Pipelines</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Systems</h3>
+                    <p>Robust, high-performance backend architectures with Node.js, Python, Java, and Go.</p>
+                    <ul>
+                        <li>REST & GraphQL APIs</li>
+                        <li>Microservices</li>
+                        <li>Database Design</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Intelligence</h3>
+                    <p>End-to-end data pipelines, analytics platforms, and business intelligence dashboards.</p>
+                    <ul>
+                        <li>Data Pipelines</li>
+                        <li>Analytics</li>
+                        <li>Visualization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2>Our Technology Stack</h2>
+            <p class="section-subtitle">We master multiple technologies across all domains</p>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-tags">
+                        <span>React</span>
+                        <span>Vue.js</span>
+                        <span>Next.js</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind CSS</span>
+                        <span>Angular</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-tags">
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>Go</span>
+                        <span>Java</span>
+                        <span>Express</span>
+                        <span>FastAPI</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>AI & ML</h3>
+                    <div class="tech-tags">
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>Transformers</span>
+                        <span>OpenCV</span>
+                        <span>Scikit-learn</span>
+                        <span>GPT APIs</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="tech-tags">
+                        <span>AWS</span>
+                        <span>Google Cloud</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>GitHub Actions</span>
+                        <span>Terraform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Showcase of our diverse and innovative work</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-globe fa-3x"></i>
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack web application with React frontend, Node.js backend, and MongoDB database. Implemented payment processing and real-time inventory management.</p>
+                    <div class="portfolio-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-robot fa-3x"></i>
+                    </div>
+                    <h3>AI Chatbot Assistant</h3>
+                    <p>Intelligent conversational AI using GPT and NLP. Integrated with web interface for customer support automation with 95% accuracy.</p>
+                    <div class="portfolio-tags">
+                        <span>Python</span>
+                        <span>GPT API</span>
+                        <span>NLP</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-mobile-alt fa-3x"></i>
+                    </div>
+                    <h3>Mobile Fitness App</h3>
+                    <p>Cross-platform mobile application built with React Native. Features workout tracking, progress analytics, and social sharing capabilities.</p>
+                    <div class="portfolio-tags">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>Redux</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-chart-line fa-3x"></i>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time data visualization platform processing millions of transactions. Built with Vue.js, Python, and Kafka for stream processing.</p>
+                    <div class="portfolio-tags">
+                        <span>Vue.js</span>
+                        <span>Python</span>
+                        <span>Kafka</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <i class="fas fa-cloud fa-3x"></i>
+                    </div>
+                    <h3>Microservices Architecture</h3>
+                    <p>Scalable cloud-native architecture deployed on Kubernetes. Implemented service mesh, auto-scaling, and comprehensive monitoring.</p>
+                    <div class="portfolio-tags">
+                        <span>Kubernetes</span>
+                        <span>Docker</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
+                        <i class="fas fa-image fa-3x"></i>
+                    </div>
+                    <h3>Computer Vision System</h3>
+                    <p>Image recognition and object detection system using YOLO and OpenCV. Achieves 98% accuracy on custom dataset with real-time processing.</p>
+                    <div class="portfolio-tags">
+                        <span>Python</span>
+                        <span>YOLO</span>
+                        <span>OpenCV</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Velora Squad</h2>
+            <p class="section-subtitle">A collective of passionate technologists</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Velora Squad, we're a powerhouse team of developers, engineers, and innovators dedicated to delivering cutting-edge solutions across the entire tech spectrum.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>To transform ideas into reality through innovative technology, delivering scalable and intelligent solutions that make a real impact.</p>
+                    
+                    <h3>Our Values</h3>
+                    <ul class="values-list">
+                        <li><i class="fas fa-check"></i> <strong>Excellence:</strong> Commitment to quality in everything we do</li>
+                        <li><i class="fas fa-check"></i> <strong>Innovation:</strong> Always exploring new technologies and approaches</li>
+                        <li><i class="fas fa-check"></i> <strong>Collaboration:</strong> Strong teamwork and open communication</li>
+                        <li><i class="fas fa-check"></i> <strong>Impact:</strong> Creating solutions that matter</li>
+                    </ul>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>Team Members</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Let's build something amazing together</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:contact@velora.dev">contact@velora.dev</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Remote - Serving Global Clients</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/velorasquad-ai" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p class="form-note">We'll get back to you within 24 hours</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Velora Squad</h3>
+                    <p>Innovating across web, AI, mobile, and cloud technologies.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">AI & ML</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">Cloud Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Velora Squad. All rights reserved.</p>
+                <p>Designed & Developed with <i class="fas fa-heart"></i> by Velora Squad</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
