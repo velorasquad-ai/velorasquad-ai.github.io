@@ -3,27 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Velora Squad - Innovating across Web Development, AI, Mobile Apps, Cloud & DevOps">
-    <meta name="keywords" content="web development, AI, machine learning, mobile apps, cloud services">
-    <title>Velora Squad - Innovating Across Tech</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Velora Squad - Next-generation collective innovating across Web Architecture, AI & Neural Systems, Mobile Apps, and Cloud & DevOps.">
+    <meta name="keywords" content="web development, AI, machine learning, mobile apps, cloud services, glassmorphism, 3D web">
+    <title>Velora Squad - Next-Gen Tech Collective</title>
+    
+    <!-- Google Fonts: Outfit & Inter for high-tech typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
+<body class="immersive-dark">
+    <!-- Top Scroll Progress Bar -->
+    <div id="scrollProgress" class="scroll-progress"></div>
+
+    <!-- Interactive Neural Constellation Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Ambient Glowing Orbs -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Glassmorphic Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="logo">
-                <i class="fas fa-rocket"></i> Velora Squad
-            </div>
+            <a href="#home" class="logo">
+                <span class="logo-icon"><i class="fas fa-rocket"></i></span>
+                <span class="logo-text">Velora <span class="logo-gradient">Squad</span></span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,302 +53,487 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (3D Holographic Stage) -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
-                <h1>Welcome to Velora Squad</h1>
-                <p>Innovating Across Web, AI, Mobile & Cloud Technologies</p>
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Pioneering Intelligent Technology</span>
+                </div>
+                <h1 class="hero-title">
+                    Architecting the <br>
+                    <span class="gradient-text text-glow">Future of Tech</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Innovating across <span class="typewriter-text" id="typewriter"></span><span class="cursor-blink">|</span>
+                </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
-                    <button class="btn btn-secondary" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">View Portfolio</button>
+                    <a href="#contact" class="btn btn-glass-primary">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="#portfolio" class="btn btn-glass-secondary">
+                        <i class="fas fa-compass"></i> Explore Portfolio
+                    </a>
+                </div>
+                <div class="hero-stats-preview">
+                    <div class="preview-item">
+                        <span class="preview-num">50+</span>
+                        <span class="preview-label">Deployments</span>
+                    </div>
+                    <div class="preview-divider"></div>
+                    <div class="preview-item">
+                        <span class="preview-num">100%</span>
+                        <span class="preview-label">Satisfaction</span>
+                    </div>
+                    <div class="preview-divider"></div>
+                    <div class="preview-item">
+                        <span class="preview-num">24/7</span>
+                        <span class="preview-label">Engineering</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="floating-card" style="animation-delay: 0s;">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="floating-card" style="animation-delay: 1s;">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="floating-card" style="animation-delay: 2s;">
-                    <i class="fas fa-cloud"></i>
+
+            <!-- 3D Holographic Visual Stage -->
+            <div class="hero-visual" id="heroVisual">
+                <div class="hero-3d-wrapper">
+                    <!-- Glass Code Console -->
+                    <div class="glass-terminal">
+                        <div class="terminal-bar">
+                            <div class="terminal-controls">
+                                <span class="ctrl-dot red"></span>
+                                <span class="ctrl-dot yellow"></span>
+                                <span class="ctrl-dot green"></span>
+                            </div>
+                            <div class="terminal-title">velora-core // v2.6.0</div>
+                        </div>
+                        <div class="terminal-screen">
+                            <p class="code-line"><span class="c-keyword">import</span> { NeuralAI, CloudMesh } <span class="c-keyword">from</span> <span class="c-str">'@velora/core'</span>;</p>
+                            <p class="code-line"><span class="c-keyword">const</span> squad = <span class="c-keyword">new</span> <span class="c-fn">VeloraSquad</span>({</p>
+                            <p class="code-line indent"><span class="c-prop">mode:</span> <span class="c-str">'HYPER_INNOVATION'</span>,</p>
+                            <p class="code-line indent"><span class="c-prop">intelligence:</span> <span class="c-str">'GPT-4 & Computer Vision'</span>,</p>
+                            <p class="code-line indent"><span class="c-prop">stack:</span> [<span class="c-str">'React'</span>, <span class="c-str">'Next.js'</span>, <span class="c-str">'PyTorch'</span>, <span class="c-str">'K8s'</span>],</p>
+                            <p class="code-line indent"><span class="c-prop">status:</span> <span class="c-accent">'ONLINE & EXPANDING'</span></p>
+                            <p class="code-line">});</p>
+                            <p class="code-line"><span class="c-fn">await</span> squad.<span class="c-fn">buildNextGenSolution</span>();</p>
+                            <div class="terminal-output">
+                                <span class="output-symbol">✔</span> Systems live &bull; 60fps glass render &bull; Ready to build
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3D Floating Hologram Badges -->
+                    <div class="floating-badge badge-ai" data-depth="40">
+                        <div class="badge-icon"><i class="fas fa-brain"></i></div>
+                        <div class="badge-text">
+                            <strong>Neural AI</strong>
+                            <small>Deep Learning & NLP</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-web" data-depth="70">
+                        <div class="badge-icon"><i class="fas fa-cube"></i></div>
+                        <div class="badge-text">
+                            <strong>Modern Web</strong>
+                            <small>Interactive & 3D</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-cloud" data-depth="55">
+                        <div class="badge-icon"><i class="fas fa-cloud-bolt"></i></div>
+                        <div class="badge-text">
+                            <strong>Cloud Native</strong>
+                            <small>Kubernetes & DevOps</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section (3D Glass Cards) -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
-            <p class="section-subtitle">We deliver cutting-edge solutions across multiple domains</p>
+            <div class="section-header">
+                <span class="section-tag">CAPABILITIES</span>
+                <h2>Our Specialized Services</h2>
+                <p class="section-subtitle">Delivering cutting-edge solutions across every layer of the modern technology stack</p>
+            </div>
             
             <div class="services-grid">
-                <div class="service-card">
+                <!-- Card 1 -->
+                <div class="service-card glass-card tilt-card" data-tilt>
+                    <div class="card-glow-layer"></div>
                     <div class="service-icon">
                         <i class="fas fa-globe"></i>
                     </div>
                     <h3>Web Development</h3>
-                    <p>Building responsive, scalable, and beautiful web applications with modern frameworks like React, Vue, and Next.js.</p>
-                    <ul>
-                        <li>React & Vue.js</li>
-                        <li>Next.js & Svelte</li>
-                        <li>Progressive Web Apps</li>
+                    <p>Building ultra-responsive, scalable, and immersive web applications with modern ecosystems like React, Vue, Next.js, and WebGL.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-chevron-right"></i> React & Vue.js Ecosystems</li>
+                        <li><i class="fas fa-chevron-right"></i> Next.js & Svelte Performance</li>
+                        <li><i class="fas fa-chevron-right"></i> Progressive Web Applications</li>
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <!-- Card 2 -->
+                <div class="service-card glass-card tilt-card" data-tilt>
+                    <div class="card-glow-layer"></div>
                     <div class="service-icon">
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>AI & Machine Learning</h3>
-                    <p>Creating intelligent systems, chatbots, and ML solutions using TensorFlow, PyTorch, and advanced NLP models.</p>
-                    <ul>
-                        <li>Deep Learning</li>
-                        <li>Natural Language Processing</li>
-                        <li>Computer Vision</li>
+                    <p>Creating intelligent neural systems, autonomous agents, and custom ML pipelines using TensorFlow, PyTorch, and generative LLMs.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-chevron-right"></i> Deep Neural Networks</li>
+                        <li><i class="fas fa-chevron-right"></i> Natural Language Processing & LLMs</li>
+                        <li><i class="fas fa-chevron-right"></i> Computer Vision & Detection</li>
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <!-- Card 3 -->
+                <div class="service-card glass-card tilt-card" data-tilt>
+                    <div class="card-glow-layer"></div>
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>Mobile Development</h3>
-                    <p>Cross-platform and native mobile apps for iOS and Android using React Native, Flutter, and Swift.</p>
-                    <ul>
-                        <li>React Native</li>
-                        <li>Flutter</li>
-                        <li>Native Development</li>
+                    <p>Cross-platform and fluid native mobile applications for iOS and Android with dynamic 60fps animations and offline synchronization.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-chevron-right"></i> React Native & Flutter</li>
+                        <li><i class="fas fa-chevron-right"></i> Native iOS & Android Engine</li>
+                        <li><i class="fas fa-chevron-right"></i> Offline-First Architecture</li>
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <!-- Card 4 -->
+                <div class="service-card glass-card tilt-card" data-tilt>
+                    <div class="card-glow-layer"></div>
                     <div class="service-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Cloud & DevOps</h3>
-                    <p>Scalable cloud infrastructure and DevOps solutions on AWS, Google Cloud, and Azure platforms.</p>
-                    <ul>
-                        <li>AWS & Google Cloud</li>
-                        <li>Docker & Kubernetes</li>
-                        <li>CI/CD Pipelines</li>
+                    <p>Scalable, fault-tolerant cloud infrastructures and automated CI/CD pipelines across AWS, GCP, and Azure with Kubernetes clusters.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-chevron-right"></i> AWS, Google Cloud & Azure</li>
+                        <li><i class="fas fa-chevron-right"></i> Docker & Kubernetes Mesh</li>
+                        <li><i class="fas fa-chevron-right"></i> Zero-Downtime CI/CD Pipelines</li>
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <!-- Card 5 -->
+                <div class="service-card glass-card tilt-card" data-tilt>
+                    <div class="card-glow-layer"></div>
                     <div class="service-icon">
                         <i class="fas fa-server"></i>
                     </div>
                     <h3>Backend Systems</h3>
-                    <p>Robust, high-performance backend architectures with Node.js, Python, Java, and Go.</p>
-                    <ul>
-                        <li>REST & GraphQL APIs</li>
-                        <li>Microservices</li>
-                        <li>Database Design</li>
+                    <p>Robust, high-throughput microservices and distributed event-driven systems powered by Node.js, Python, Go, and high-performance databases.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-chevron-right"></i> High-Throughput REST & GraphQL</li>
+                        <li><i class="fas fa-chevron-right"></i> Distributed Microservices</li>
+                        <li><i class="fas fa-chevron-right"></i> Scalable Data Architecture</li>
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <!-- Card 6 -->
+                <div class="service-card glass-card tilt-card" data-tilt>
+                    <div class="card-glow-layer"></div>
                     <div class="service-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <h3>Data Intelligence</h3>
-                    <p>End-to-end data pipelines, analytics platforms, and business intelligence dashboards.</p>
-                    <ul>
-                        <li>Data Pipelines</li>
-                        <li>Analytics</li>
-                        <li>Visualization</li>
+                    <p>End-to-end real-time data streaming pipelines, telemetry analytics, and interactive holographic business intelligence dashboards.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-chevron-right"></i> Real-Time Stream Processing</li>
+                        <li><i class="fas fa-chevron-right"></i> Predictive Analytics Engines</li>
+                        <li><i class="fas fa-chevron-right"></i> Interactive Visual Dashboards</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section class="tech-stack">
+    <!-- Tech Stack Section (Holographic Matrix) -->
+    <section id="tech-stack" class="tech-stack">
         <div class="container">
-            <h2>Our Technology Stack</h2>
-            <p class="section-subtitle">We master multiple technologies across all domains</p>
+            <div class="section-header">
+                <span class="section-tag">TECHNOLOGY</span>
+                <h2>Our Technology Matrix</h2>
+                <p class="section-subtitle">Mastering cutting-edge frameworks, tools, and enterprise cloud stacks</p>
+            </div>
             
             <div class="tech-categories">
-                <div class="tech-category">
-                    <h3>Frontend</h3>
+                <div class="tech-category glass-card tilt-card" data-tilt>
+                    <div class="category-header">
+                        <i class="fas fa-code tech-cat-icon"></i>
+                        <h3>Frontend</h3>
+                    </div>
                     <div class="tech-tags">
-                        <span>React</span>
-                        <span>Vue.js</span>
-                        <span>Next.js</span>
-                        <span>TypeScript</span>
-                        <span>Tailwind CSS</span>
-                        <span>Angular</span>
+                        <span class="tech-chip">React</span>
+                        <span class="tech-chip">Vue.js</span>
+                        <span class="tech-chip">Next.js</span>
+                        <span class="tech-chip">TypeScript</span>
+                        <span class="tech-chip">Tailwind CSS</span>
+                        <span class="tech-chip">Angular</span>
+                        <span class="tech-chip">WebGL / Three.js</span>
                     </div>
                 </div>
 
-                <div class="tech-category">
-                    <h3>Backend</h3>
+                <div class="tech-category glass-card tilt-card" data-tilt>
+                    <div class="category-header">
+                        <i class="fas fa-database tech-cat-icon"></i>
+                        <h3>Backend</h3>
+                    </div>
                     <div class="tech-tags">
-                        <span>Node.js</span>
-                        <span>Python</span>
-                        <span>Go</span>
-                        <span>Java</span>
-                        <span>Express</span>
-                        <span>FastAPI</span>
+                        <span class="tech-chip">Node.js</span>
+                        <span class="tech-chip">Python</span>
+                        <span class="tech-chip">Go</span>
+                        <span class="tech-chip">Java</span>
+                        <span class="tech-chip">Express</span>
+                        <span class="tech-chip">FastAPI</span>
+                        <span class="tech-chip">PostgreSQL</span>
                     </div>
                 </div>
 
-                <div class="tech-category">
-                    <h3>AI & ML</h3>
+                <div class="tech-category glass-card tilt-card" data-tilt>
+                    <div class="category-header">
+                        <i class="fas fa-brain tech-cat-icon"></i>
+                        <h3>AI & ML</h3>
+                    </div>
                     <div class="tech-tags">
-                        <span>TensorFlow</span>
-                        <span>PyTorch</span>
-                        <span>Transformers</span>
-                        <span>OpenCV</span>
-                        <span>Scikit-learn</span>
-                        <span>GPT APIs</span>
+                        <span class="tech-chip">TensorFlow</span>
+                        <span class="tech-chip">PyTorch</span>
+                        <span class="tech-chip">Transformers</span>
+                        <span class="tech-chip">OpenCV</span>
+                        <span class="tech-chip">Scikit-learn</span>
+                        <span class="tech-chip">GPT APIs</span>
+                        <span class="tech-chip">LangChain</span>
                     </div>
                 </div>
 
-                <div class="tech-category">
-                    <h3>Cloud & DevOps</h3>
+                <div class="tech-category glass-card tilt-card" data-tilt>
+                    <div class="category-header">
+                        <i class="fas fa-network-wired tech-cat-icon"></i>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
                     <div class="tech-tags">
-                        <span>AWS</span>
-                        <span>Google Cloud</span>
-                        <span>Docker</span>
-                        <span>Kubernetes</span>
-                        <span>GitHub Actions</span>
-                        <span>Terraform</span>
+                        <span class="tech-chip">AWS</span>
+                        <span class="tech-chip">Google Cloud</span>
+                        <span class="tech-chip">Docker</span>
+                        <span class="tech-chip">Kubernetes</span>
+                        <span class="tech-chip">GitHub Actions</span>
+                        <span class="tech-chip">Terraform</span>
+                        <span class="tech-chip">Redis</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section (3D Holographic Showcase) -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>Featured Projects</h2>
-            <p class="section-subtitle">Showcase of our diverse and innovative work</p>
+            <div class="section-header">
+                <span class="section-tag">PORTFOLIO</span>
+                <h2>Featured Projects</h2>
+                <p class="section-subtitle">A showcase of diverse, high-performance, and impactful digital solutions</p>
+            </div>
             
             <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                        <i class="fas fa-globe fa-3x"></i>
+                <!-- Project 1 -->
+                <div class="portfolio-card glass-card tilt-card" data-tilt>
+                    <div class="portfolio-image banner-gradient-1">
+                        <div class="image-overlay-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span class="portfolio-badge">Full-Stack</span>
                     </div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>Full-stack web application with React frontend, Node.js backend, and MongoDB database. Implemented payment processing and real-time inventory management.</p>
-                    <div class="portfolio-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                        <i class="fas fa-robot fa-3x"></i>
-                    </div>
-                    <h3>AI Chatbot Assistant</h3>
-                    <p>Intelligent conversational AI using GPT and NLP. Integrated with web interface for customer support automation with 95% accuracy.</p>
-                    <div class="portfolio-tags">
-                        <span>Python</span>
-                        <span>GPT API</span>
-                        <span>NLP</span>
+                    <div class="portfolio-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>High-concurrency e-commerce architecture with React frontend, Node.js microservices, and MongoDB. Real-time inventory sync and Stripe payment engine.</p>
+                        <div class="portfolio-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="portfolio-card">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                        <i class="fas fa-mobile-alt fa-3x"></i>
+                <!-- Project 2 -->
+                <div class="portfolio-card glass-card tilt-card" data-tilt>
+                    <div class="portfolio-image banner-gradient-2">
+                        <div class="image-overlay-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="portfolio-badge">Generative AI</span>
                     </div>
-                    <h3>Mobile Fitness App</h3>
-                    <p>Cross-platform mobile application built with React Native. Features workout tracking, progress analytics, and social sharing capabilities.</p>
-                    <div class="portfolio-tags">
-                        <span>React Native</span>
-                        <span>Firebase</span>
-                        <span>Redux</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                        <i class="fas fa-chart-line fa-3x"></i>
-                    </div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>Real-time data visualization platform processing millions of transactions. Built with Vue.js, Python, and Kafka for stream processing.</p>
-                    <div class="portfolio-tags">
-                        <span>Vue.js</span>
-                        <span>Python</span>
-                        <span>Kafka</span>
+                    <div class="portfolio-info">
+                        <h3>AI Chatbot Assistant</h3>
+                        <p>Conversational intelligent agent with semantic search and dynamic function calling. Automated 85% of complex customer support workflows.</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>GPT API</span>
+                            <span>LangChain</span>
+                            <span>VectorDB</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="portfolio-card">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                        <i class="fas fa-cloud fa-3x"></i>
+                <!-- Project 3 -->
+                <div class="portfolio-card glass-card tilt-card" data-tilt>
+                    <div class="portfolio-image banner-gradient-3">
+                        <div class="image-overlay-icon">
+                            <i class="fas fa-mobile-screen"></i>
+                        </div>
+                        <span class="portfolio-badge">Mobile</span>
                     </div>
-                    <h3>Microservices Architecture</h3>
-                    <p>Scalable cloud-native architecture deployed on Kubernetes. Implemented service mesh, auto-scaling, and comprehensive monitoring.</p>
-                    <div class="portfolio-tags">
-                        <span>Kubernetes</span>
-                        <span>Docker</span>
-                        <span>AWS</span>
+                    <div class="portfolio-info">
+                        <h3>Mobile Fitness App</h3>
+                        <p>Fluid cross-platform application with real-time bio-metric tracking, workout analytics, audio cues, and social challenges across iOS and Android.</p>
+                        <div class="portfolio-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                            <span>HealthKit</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="portfolio-card">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
-                        <i class="fas fa-image fa-3x"></i>
+                <!-- Project 4 -->
+                <div class="portfolio-card glass-card tilt-card" data-tilt>
+                    <div class="portfolio-image banner-gradient-4">
+                        <div class="image-overlay-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="portfolio-badge">Big Data</span>
                     </div>
-                    <h3>Computer Vision System</h3>
-                    <p>Image recognition and object detection system using YOLO and OpenCV. Achieves 98% accuracy on custom dataset with real-time processing.</p>
-                    <div class="portfolio-tags">
-                        <span>Python</span>
-                        <span>YOLO</span>
-                        <span>OpenCV</span>
+                    <div class="portfolio-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real-time telemetry and financial visualization platform processing over 10M events daily via Kafka streaming and GPU-accelerated charts.</p>
+                        <div class="portfolio-tags">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>Kafka</span>
+                            <span>ClickHouse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-card glass-card tilt-card" data-tilt>
+                    <div class="portfolio-image banner-gradient-5">
+                        <div class="image-overlay-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <span class="portfolio-badge">Cloud Native</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Microservices Mesh</h3>
+                        <p>Autonomous cloud-native architecture deployed across Kubernetes with service mesh, zero-trust security policies, and distributed tracing.</p>
+                        <div class="portfolio-tags">
+                            <span>Kubernetes</span>
+                            <span>Docker</span>
+                            <span>AWS</span>
+                            <span>Istio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-card glass-card tilt-card" data-tilt>
+                    <div class="portfolio-image banner-gradient-6">
+                        <div class="image-overlay-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <span class="portfolio-badge">Computer Vision</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Vision Detection System</h3>
+                        <p>Real-time edge object detection and automated visual defect classification system utilizing custom YOLO neural network models with 98.4% precision.</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>YOLO</span>
+                            <span>OpenCV</span>
+                            <span>PyTorch</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section (Holographic Stats & Mission) -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Velora Squad</h2>
-            <p class="section-subtitle">A collective of passionate technologists</p>
+            <div class="section-header">
+                <span class="section-tag">WHO WE ARE</span>
+                <h2>About Velora Squad</h2>
+                <p class="section-subtitle">A collective of passionate technologists transforming bold concepts into reality</p>
+            </div>
             
             <div class="about-content">
-                <div class="about-text">
-                    <p>At Velora Squad, we're a powerhouse team of developers, engineers, and innovators dedicated to delivering cutting-edge solutions across the entire tech spectrum.</p>
-                    
+                <div class="about-text glass-card">
                     <h3>Our Mission</h3>
-                    <p>To transform ideas into reality through innovative technology, delivering scalable and intelligent solutions that make a real impact.</p>
+                    <p>To pioneer intelligent solutions through cutting-edge technology, architecting scalable, resilient, and visually captivating systems that make a lasting digital impact.</p>
                     
-                    <h3>Our Values</h3>
+                    <h3 class="values-heading">Our Core Pillars</h3>
                     <ul class="values-list">
-                        <li><i class="fas fa-check"></i> <strong>Excellence:</strong> Commitment to quality in everything we do</li>
-                        <li><i class="fas fa-check"></i> <strong>Innovation:</strong> Always exploring new technologies and approaches</li>
-                        <li><i class="fas fa-check"></i> <strong>Collaboration:</strong> Strong teamwork and open communication</li>
-                        <li><i class="fas fa-check"></i> <strong>Impact:</strong> Creating solutions that matter</li>
+                        <li>
+                            <div class="value-check"><i class="fas fa-check"></i></div>
+                            <div>
+                                <strong>Technical Mastery:</strong>
+                                <span>Relentless pursuit of architectural elegance, speed, and reliability.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value-check"><i class="fas fa-check"></i></div>
+                            <div>
+                                <strong>Forward Innovation:</strong>
+                                <span>Constantly integrating emerging breakthroughs in AI, 3D, and cloud.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value-check"><i class="fas fa-check"></i></div>
+                            <div>
+                                <strong>Seamless Collaboration:</strong>
+                                <span>Transparent communication and agile execution for maximum velocity.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value-check"><i class="fas fa-check"></i></div>
+                            <div>
+                                <strong>Tangible Impact:</strong>
+                                <span>Building high-value products that solve real-world problems.</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>50+</h3>
+                <div class="about-stats-grid">
+                    <div class="stat-item glass-card tilt-card" data-tilt>
+                        <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                        <h3 class="stat-number" data-target="50">0</h3>
+                        <span class="stat-suffix">+</span>
                         <p>Projects Completed</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>20+</h3>
-                        <p>Team Members</p>
+                    <div class="stat-item glass-card tilt-card" data-tilt>
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <h3 class="stat-number" data-target="20">0</h3>
+                        <span class="stat-suffix">+</span>
+                        <p>Specialist Engineers</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>15+</h3>
-                        <p>Years Experience</p>
+                    <div class="stat-item glass-card tilt-card" data-tilt>
+                        <div class="stat-icon"><i class="fas fa-award"></i></div>
+                        <h3 class="stat-number" data-target="15">0</h3>
+                        <span class="stat-suffix">+</span>
+                        <p>Years Combined Exp</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>100%</h3>
+                    <div class="stat-item glass-card tilt-card" data-tilt>
+                        <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                        <h3 class="stat-number" data-target="100">0</h3>
+                        <span class="stat-suffix">%</span>
                         <p>Client Satisfaction</p>
                     </div>
                 </div>
@@ -334,30 +541,35 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section (3D Glass Hologram for velorasquad.ai@gmail.com) -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="section-subtitle">Let's build something amazing together</p>
+            <div class="section-header">
+                <span class="section-tag">COMMUNICATION</span>
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">Let's build something revolutionary together</p>
+            </div>
             
             <div class="contact-highlight-wrapper">
-                <div class="contact-highlight-card">
+                <div class="contact-highlight-card glass-card tilt-card" data-tilt>
+                    <div class="hologram-glow-ring"></div>
                     <div class="contact-highlight-badge">
                         <i class="fas fa-envelope-open-text"></i>
                     </div>
-                    <h3>Direct Email</h3>
-                    <p class="highlight-description">Have a project in mind, questions, or collaboration ideas? Reach out directly:</p>
+                    <h3>Direct Communication</h3>
+                    <p class="highlight-description">Have a project proposal, technical inquiry, or collaboration in mind? Reach out directly to our engineering squad:</p>
                     
-                    <div class="email-highlight-box">
+                    <div class="email-highlight-box" id="emailHighlightBox">
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:velorasquad.ai@gmail.com" class="highlight-email-link" id="contactEmail">velorasquad.ai@gmail.com</a>
+                        <span class="email-copy-badge"><i class="fas fa-copy"></i> Click to copy</span>
                     </div>
 
                     <div class="highlight-actions">
-                        <a href="mailto:velorasquad.ai@gmail.com" class="btn btn-primary">
+                        <a href="mailto:velorasquad.ai@gmail.com" class="btn btn-glass-primary">
                             <i class="fas fa-paper-plane"></i> Send Email
                         </a>
-                        <button type="button" class="btn btn-secondary" id="copyEmailBtn">
+                        <button type="button" class="btn btn-glass-secondary" id="copyEmailBtn">
                             <i class="fas fa-copy"></i> <span id="copyBtnText">Copy Email</span>
                         </button>
                     </div>
@@ -366,39 +578,48 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Glassmorphic Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Velora Squad</h3>
-                    <p>Innovating across web, AI, mobile, and cloud technologies.</p>
+                    <a href="#home" class="footer-logo">
+                        <i class="fas fa-rocket"></i> Velora <span class="logo-gradient">Squad</span>
+                    </a>
+                    <p>Pioneering the future of digital experience through Artificial Intelligence, Web Architecture, Mobile, and Distributed Cloud Computing.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>Navigation</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#tech-stack">Tech Stack</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Services</h4>
+                    <h4>Domains</h4>
                     <ul>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">AI & ML</a></li>
-                        <li><a href="#">Mobile Apps</a></li>
-                        <li><a href="#">Cloud Services</a></li>
+                        <li><a href="#services">Neural AI & Machine Learning</a></li>
+                        <li><a href="#services">Immersive Web Applications</a></li>
+                        <li><a href="#services">Cross-Platform Mobile Apps</a></li>
+                        <li><a href="#services">Cloud Architecture & DevOps</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Velora Squad. All rights reserved.</p>
-                <p>Designed & Developed with <i class="fas fa-heart"></i> by Velora Squad</p>
+                <p class="footer-built">Engineered with <i class="fas fa-heart text-accent"></i> for the modern web</p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
