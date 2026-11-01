@@ -306,11 +306,11 @@ function initTypewriter() {
     if (!el) return;
 
     const phrases = [
-        'Software as a Service (SaaS)',
+        'Web & Mobile Applications',
+        'WhatsApp & Telegram Bots',
         'Fully Managed Cloud Hosting',
-        'Intelligent AI Chatbots',
         'Computer Vision & Automation',
-        'End-to-End Web Solutions'
+        'Turnkey Digital Engineering'
     ];
 
     let phraseIdx = 0;

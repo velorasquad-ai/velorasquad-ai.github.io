@@ -966,9 +966,13 @@ h1, h2, h3, h4 {
     color: var(--text-secondary);
 }
 
-/* --- Three-Column Services Grid --- */
+/* --- Services Grids --- */
 .services-three-col {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.services-four-col {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 /* --- Process Section (How It Works) --- */
