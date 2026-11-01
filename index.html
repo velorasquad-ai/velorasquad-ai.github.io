@@ -18,17 +18,20 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="immersive-dark">
+<body class="immersive-light">
     <!-- Top Scroll Progress Bar -->
     <div id="scrollProgress" class="scroll-progress"></div>
 
     <!-- Interactive Neural Constellation Background Canvas -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Ambient Glowing Orbs -->
-    <div class="ambient-glow glow-1"></div>
-    <div class="ambient-glow glow-2"></div>
-    <div class="ambient-glow glow-3"></div>
+    <!-- Flowing Liquid Aurora Mesh Stage for 3D Glass Refraction -->
+    <div class="flowing-mesh-bg" id="flowingMesh">
+        <div class="flow-blob blob-1"></div>
+        <div class="flow-blob blob-2"></div>
+        <div class="flow-blob blob-3"></div>
+        <div class="flow-blob blob-4"></div>
+    </div>
 
     <!-- Glassmorphic Navigation -->
     <nav class="navbar" id="navbar">
@@ -81,9 +84,14 @@
                 </div>
             </div>
 
-            <!-- 3D Glass Code Terminal -->
+            <!-- 3D Glass Code Terminal Stage -->
             <div class="hero-visual" id="heroVisual">
                 <div class="hero-3d-wrapper">
+                    <!-- 3D Floating Glass Badge 1 -->
+                    <div class="floating-glass-chip chip-top">
+                        <span class="chip-pulse-dot"></span> 99.9% Cloud Uptime &bull; Managed
+                    </div>
+
                     <div class="glass-terminal">
                         <div class="terminal-bar">
                             <div class="terminal-controls">
@@ -107,6 +115,11 @@
                                 <span class="output-symbol">✔</span> Status: Deployed, Fully Hosted &amp; Live
                             </div>
                         </div>
+                    </div>
+
+                    <!-- 3D Floating Glass Badge 2 -->
+                    <div class="floating-glass-chip chip-bottom">
+                        <i class="fas fa-brain"></i> AI Chatbot &amp; Vision &bull; Active
                     </div>
                 </div>
             </div>

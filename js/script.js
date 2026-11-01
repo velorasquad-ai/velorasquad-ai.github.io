@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollProgress();
     initNavbar();
     initBackgroundCanvas();
+    initMeshFlowParallax();
     init3DCardTilt();
     initHeroParallax();
     initTypewriter();
@@ -136,10 +137,10 @@ function initBackgroundCanvas() {
             particles.push({
                 x: Math.random() * width,
                 y: Math.random() * height,
-                vx: (Math.random() - 0.5) * 0.7,
-                vy: (Math.random() - 0.5) * 0.7,
-                radius: Math.random() * 2 + 1,
-                color: Math.random() > 0.5 ? 'rgba(139, 92, 246,' : 'rgba(6, 182, 212,'
+                vx: (Math.random() - 0.5) * 0.6,
+                vy: (Math.random() - 0.5) * 0.6,
+                radius: Math.random() * 2 + 1.2,
+                color: Math.random() > 0.5 ? 'rgba(45, 106, 79,' : 'rgba(107, 144, 128,'
             });
         }
     }
@@ -177,10 +178,10 @@ function initBackgroundCanvas() {
             // Draw particle dot
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `${p.color} 0.6)`;
+            ctx.fillStyle = `${p.color} 0.45)`;
             ctx.fill();
 
-            // Connect nearby particles
+            // Connect nearby particles with delicate lines
             for (let j = i + 1; j < particles.length; j++) {
                 const p2 = particles[j];
                 const dx = p.x - p2.x;
@@ -188,12 +189,12 @@ function initBackgroundCanvas() {
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
                 if (dist < 115) {
-                    const alpha = (1 - dist / 115) * 0.28;
+                    const alpha = (1 - dist / 115) * 0.16;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(139, 92, 246, ${alpha})`;
-                    ctx.lineWidth = 0.9;
+                    ctx.strokeStyle = `rgba(45, 106, 79, ${alpha})`;
+                    ctx.lineWidth = 0.85;
                     ctx.stroke();
                 }
             }
@@ -215,7 +216,7 @@ function initBackgroundCanvas() {
 }
 
 /* ==========================================================================
-   4. 3D Card Tilt Interaction with Specular Glare
+   4. 3D Card Tilt Interaction with Specular Glare & 3D Lift
    ========================================================================== */
 function init3DCardTilt() {
     // Only enable on desktop/laptops with fine cursor
@@ -229,19 +230,47 @@ function init3DCardTilt() {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
+            // Update CSS variables for dynamic specular glass glare
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            const rotateX = ((y - centerY) / centerY) * -10; // max 10 deg
-            const rotateY = ((x - centerX) / centerX) * 10;
+            const rotateX = ((y - centerY) / centerY) * -11; // 11 deg
+            const rotateY = ((x - centerX) / centerX) * 11;
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px)`;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-10px) translateZ(12px) scale(1.02)`;
         });
 
         card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) translateZ(0) scale(1)';
         });
     });
+}
+
+/* ==========================================================================
+   4.1 Liquid Mesh Flow Background Parallax
+   ========================================================================== */
+function initMeshFlowParallax() {
+    const mesh = document.getElementById('flowingMesh');
+    if (!mesh || window.matchMedia('(pointer: coarse)').matches) return;
+
+    let targetX = 0, targetY = 0;
+    let currentX = 0, currentY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+        targetX = (e.clientX / window.innerWidth - 0.5) * 55;
+        targetY = (e.clientY / window.innerHeight - 0.5) * 55;
+    }, { passive: true });
+
+    function renderParallax() {
+        currentX += (targetX - currentX) * 0.045;
+        currentY += (targetY - currentY) * 0.045;
+        mesh.style.transform = `translate3d(${currentX.toFixed(2)}px, ${currentY.toFixed(2)}px, 0)`;
+        requestAnimationFrame(renderParallax);
+    }
+    renderParallax();
 }
 
 /* ==========================================================================
@@ -395,11 +424,11 @@ function showToast(message, type = 'success') {
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%) translateY(20px);
-        background: rgba(14, 18, 34, 0.92);
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid ${type === 'success' ? 'rgba(16, 185, 129, 0.5)' : 'rgba(239, 68, 68, 0.5)'};
-        color: #f8fafc;
+        border: 1px solid ${type === 'success' ? 'rgba(45, 106, 79, 0.4)' : 'rgba(239, 68, 68, 0.4)'};
+        color: #19231d;
         padding: 14px 26px;
         border-radius: 50px;
         font-family: 'Outfit', sans-serif;
@@ -408,7 +437,7 @@ function showToast(message, type = 'success') {
         display: flex;
         align-items: center;
         gap: 12px;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px ${type === 'success' ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)'};
+        box-shadow: 0 20px 45px -10px rgba(25, 35, 29, 0.12), 0 0 15px ${type === 'success' ? 'rgba(45, 106, 79, 0.15)' : 'rgba(239, 68, 68, 0.15)'};
         z-index: 100000;
         opacity: 0;
         transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
