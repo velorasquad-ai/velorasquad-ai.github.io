@@ -140,7 +140,7 @@ function initBackgroundCanvas() {
                 vx: (Math.random() - 0.5) * 0.6,
                 vy: (Math.random() - 0.5) * 0.6,
                 radius: Math.random() * 2 + 1.2,
-                color: Math.random() > 0.5 ? 'rgba(45, 106, 79,' : 'rgba(107, 144, 128,'
+                color: Math.random() > 0.5 ? 'rgba(109, 40, 217,' : 'rgba(139, 92, 246,'
             });
         }
     }
@@ -193,7 +193,7 @@ function initBackgroundCanvas() {
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(45, 106, 79, ${alpha})`;
+                    ctx.strokeStyle = `rgba(109, 40, 217, ${alpha})`;
                     ctx.lineWidth = 0.85;
                     ctx.stroke();
                 }
@@ -427,8 +427,8 @@ function showToast(message, type = 'success') {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid ${type === 'success' ? 'rgba(45, 106, 79, 0.4)' : 'rgba(239, 68, 68, 0.4)'};
-        color: #19231d;
+        border: 1px solid ${type === 'success' ? 'rgba(109, 40, 217, 0.4)' : 'rgba(239, 68, 68, 0.4)'};
+        color: #1e1b4b;
         padding: 14px 26px;
         border-radius: 50px;
         font-family: 'Outfit', sans-serif;
@@ -437,7 +437,7 @@ function showToast(message, type = 'success') {
         display: flex;
         align-items: center;
         gap: 12px;
-        box-shadow: 0 20px 45px -10px rgba(25, 35, 29, 0.12), 0 0 15px ${type === 'success' ? 'rgba(45, 106, 79, 0.15)' : 'rgba(239, 68, 68, 0.15)'};
+        box-shadow: 0 20px 45px -10px rgba(30, 27, 75, 0.12), 0 0 15px ${type === 'success' ? 'rgba(109, 40, 217, 0.15)' : 'rgba(239, 68, 68, 0.15)'};
         z-index: 100000;
         opacity: 0;
         transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
