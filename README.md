@@ -49,9 +49,7 @@ Your website is hosted at: **https://velorasquad-ai.github.io**
 ### Update Contact Information
 
 Edit in `index.html`:
-- Email: Search for "contact@velora.dev"
-- Phone: Search for "+1 (234) 567-890"
-- Social Links: Find the social-links section
+- Email: Search for "velorasquad.ai@gmail.com"
 
 ### Add Your Projects
 
@@ -74,12 +72,8 @@ Edit text directly in `index.html` — all sections are clearly labeled.
 
 The website is automatically hosted on GitHub Pages. Any changes pushed to the `main` branch will be live within seconds.
 
-## 📧 Contact Form
-
-Currently, the contact form validates and displays messages locally. To enable email notifications, integrate with:
-- **Formspree** — No backend required
-- **Netlify Forms** — Built-in form handling
-- **EmailJS** — Client-side email service
+## 📧 Contact
+Direct email contact is provided via `velorasquad.ai@gmail.com` with one-click email client launch and clipboard copy.
 
 ## 📱 Mobile Responsive
 

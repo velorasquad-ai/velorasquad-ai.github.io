@@ -35,40 +35,55 @@ if (hamburger) {
 }
 
 // ===========================
-// Contact Form Handling
+// Contact Email Copy Handling
 // ===========================
 
-const contactForm = document.getElementById('contactForm');
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+const contactEmail = document.getElementById('contactEmail');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-            showAlert('Please fill in all fields', 'error');
-            return;
+if (copyEmailBtn) {
+    function setCopySuccessState() {
+        const copyBtnText = document.getElementById('copyBtnText');
+        if (copyBtnText) {
+            const prev = copyBtnText.textContent;
+            copyBtnText.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtnText.textContent = prev;
+            }, 2000);
         }
-        
-        // Email validation
-        if (!isValidEmail(email)) {
-            showAlert('Please enter a valid email', 'error');
-            return;
+        showAlert('Email copied to clipboard!', 'success');
+    }
+
+    function fallbackCopy(text) {
+        try {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            tempInput.style.position = 'fixed';
+            tempInput.style.opacity = '0';
+            document.body.appendChild(tempInput);
+            tempInput.focus();
+            tempInput.select();
+            const successful = document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            if (successful) {
+                setCopySuccessState();
+            } else {
+                showAlert('Could not copy email', 'error');
+            }
+        } catch (err) {
+            showAlert('Could not copy email', 'error');
         }
-        
-        // In a real application, you would send this to a server
-        console.log('Form data:', { name, email, subject, message });
-        
-        // Show success message
-        showAlert('Thank you! Your message has been sent. We\'ll get back to you soon.', 'success');
-        
-        // Reset form
-        contactForm.reset();
+    }
+
+    copyEmailBtn.addEventListener('click', () => {
+        const emailText = contactEmail ? contactEmail.textContent.trim() : 'velorasquad.ai@gmail.com';
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(emailText)
+                .then(setCopySuccessState)
+                .catch(() => fallbackCopy(emailText));
+        } else {
+            fallbackCopy(emailText);
+        }
     });
 }
 
@@ -129,7 +144,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all cards
-const cards = document.querySelectorAll('.service-card, .portfolio-card, .stat-item');
+const cards = document.querySelectorAll('.service-card, .portfolio-card, .stat-item, .contact-highlight-card');
 cards.forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
