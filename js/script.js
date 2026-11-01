@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     init3DCardTilt();
     initHeroParallax();
     initTypewriter();
-    initStatsCounter();
     initContactEmailCopy();
     initBackToTop();
 });
@@ -253,7 +252,6 @@ function initHeroParallax() {
 
     const heroVisual = document.getElementById('heroVisual');
     const heroWrapper = document.querySelector('.hero-3d-wrapper');
-    const floatingBadges = document.querySelectorAll('.floating-badge');
 
     if (!heroVisual || !heroWrapper) return;
 
@@ -263,22 +261,11 @@ function initHeroParallax() {
         const mouseY = (e.clientY - rect.top) / rect.height - 0.5;
 
         // Subtle tilt for the main terminal
-        heroWrapper.style.transform = `rotateX(${ -mouseY * 18 }deg) rotateY(${ mouseX * 22 }deg)`;
-
-        // Floating badges with amplified 3D translation
-        floatingBadges.forEach(badge => {
-            const depth = parseFloat(badge.getAttribute('data-depth')) || 40;
-            const moveX = mouseX * depth;
-            const moveY = mouseY * depth;
-            badge.style.transform = `translate3d(${moveX}px, ${moveY}px, ${depth}px)`;
-        });
+        heroWrapper.style.transform = `rotateX(${ -mouseY * 16 }deg) rotateY(${ mouseX * 20 }deg)`;
     });
 
     heroVisual.addEventListener('mouseleave', () => {
         heroWrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
-        floatingBadges.forEach(badge => {
-            badge.style.transform = '';
-        });
     });
 }
 
@@ -290,11 +277,11 @@ function initTypewriter() {
     if (!el) return;
 
     const phrases = [
-        'Artificial Intelligence & Neural Systems',
-        'Immersive Web Architecture & 3D UIs',
-        'Cross-Platform Mobile Ecosystems',
-        'Cloud-Native Kubernetes & DevOps',
-        'Distributed Microservices at Scale'
+        'Software as a Service (SaaS)',
+        'Fully Managed Cloud Hosting',
+        'Intelligent AI Chatbots',
+        'Computer Vision & Automation',
+        'End-to-End Web Solutions'
     ];
 
     let phraseIdx = 0;
@@ -328,47 +315,6 @@ function initTypewriter() {
     }
 
     tick();
-}
-
-/* ==========================================================================
-   7. Animated Stats Counter (Scroll Triggered)
-   ========================================================================== */
-function initStatsCounter() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    if (!statNumbers.length) return;
-
-    let hasRun = false;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !hasRun) {
-                hasRun = true;
-                statNumbers.forEach(counter => {
-                    const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
-                    const duration = 1800; // ms
-                    const stepTime = 20;
-                    const steps = duration / stepTime;
-                    const increment = target / steps;
-                    let current = 0;
-
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= target) {
-                            counter.textContent = target;
-                            clearInterval(timer);
-                        } else {
-                            counter.textContent = Math.floor(current);
-                        }
-                    }, stepTime);
-                });
-            }
-        });
-    }, { threshold: 0.3 });
-
-    const statsGrid = document.querySelector('.about-stats-grid');
-    if (statsGrid) {
-        observer.observe(statsGrid);
-    }
 }
 
 /* ==========================================================================

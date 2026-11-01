@@ -1,102 +1,65 @@
-# Velora Squad - Official Website
+# Velora Squad - Official Website & Portfolio
 
-Welcome to the official website of **Velora Squad**, a collective of passionate technologists delivering cutting-edge solutions across Web Development, AI, Mobile Apps, Cloud & DevOps.
+Welcome to the official website and portfolio of **Velora Squad**. We specialize in building custom **Software as a Service (SaaS)** platforms, taking full care of **managed cloud hosting**, and integrating **intelligent AI solutions** (such as conversational chatbots and computer vision).
 
-## 🚀 Website Features
+---
 
-- **Responsive Design** — Mobile-first approach, works on all devices
-- **Modern Animations** — Smooth scrolling, floating cards, and transitions
-- **Professional Layout** — Clean sections: Home, Services, Portfolio, About, Contact
-- **Interactive Elements** — Hamburger menu, form validation, scroll animations
-- **SEO Optimized** — Meta tags and semantic HTML
+## 🚀 What We Do
+
+1. **Software as a Service (SaaS) Development** — Custom web applications, customer portals, internal tools, and SaaS platforms built with clean, modern, scalable code.
+2. **Managed Cloud Hosting** — We handle complete deployment, cloud infrastructure, domain & SSL configuration, uptime monitoring, and ongoing maintenance.
+3. **AI Integrations** — Practical AI solutions including customer support chatbots, LLM automation, and computer vision (object detection, visual recognition).
+
+---
 
 ## 📁 File Structure
 
 ```
 velorasquad-ai.github.io/
-├── index.html          # Main HTML file
+├── index.html          # Main HTML entry file
 ├── css/
-│   └── style.css       # All styling and responsive design
+│   └── style.css       # 3D glassmorphism styles and responsive layouts
 ├── js/
-│   └── script.js       # Interactive features and animations
-└── README.md           # This file
+│   └── script.js       # Interactive particles, 3D tilt, and clipboard actions
+└── README.md           # Documentation
 ```
+
+---
 
 ## 🎨 Sections
 
-1. **Navigation** — Sticky navbar with smooth scrolling
-2. **Hero** — Eye-catching landing section with floating animations
-3. **Services** — 6 service cards showcasing expertise
-4. **Tech Stack** — Technology categories by domain
-5. **Portfolio** — Featured projects with descriptions
-6. **About** — Team info and statistics
-7. **Contact** — Contact form and social links
+1. **Navigation** — Frosted glass navbar with scroll spy and mobile menu
+2. **Hero** — Clean 3D glass terminal showcasing our core SaaS + AI delivery pipeline
+3. **What We Do** — 3 core pillars: SaaS Development, Managed Cloud Hosting, and AI Integration
+4. **How It Works** — 3-step streamlined workflow (Understand, Build, Host & Maintain)
+5. **Portfolio** — Real-world solutions (AI Chatbot, Custom SaaS, Vision AI, Analytics)
+6. **About Us** — Direct overview of our team and engineering values (no fake stats)
+7. **Contact** — Highlighted direct email contact card for `velorasquad.ai@gmail.com`
 8. **Footer** — Quick links and company info
+
+---
 
 ## 👨‍💻 Technologies Used
 
-- **HTML5** — Semantic markup
-- **CSS3** — Modern styling with animations
-- **Vanilla JavaScript** — No framework dependencies
-- **Font Awesome** — Icon library
+- **HTML5** — Semantic, SEO-optimized markup
+- **CSS3** — Custom 3D glassmorphic styling, neon cyber palette, responsive design
+- **Vanilla JavaScript** — High-performance, zero-build, 100% compatible with GitHub Pages Free
+- **Font Awesome & Google Fonts** — Vector icons and modern typography (Outfit & Inter)
+
+---
 
 ## 🌐 Live Website
 
-Your website is hosted at: **https://velorasquad-ai.github.io**
+Hosted on GitHub Pages: **[https://velorasquad-ai.github.io](https://velorasquad-ai.github.io)**
 
-## 📝 How to Customize
-
-### Update Contact Information
-
-Edit in `index.html`:
-- Email: Search for "velorasquad.ai@gmail.com"
-
-### Add Your Projects
-
-Edit portfolio cards in `index.html` — Find the portfolio section and update the project details.
-
-### Change Colors
-
-Edit CSS variables in `css/style.css` (Lines 9-18):
-```css
---primary: #667eea;     /* Main color */
---secondary: #764ba2;   /* Accent color */
---accent: #f5576c;      /* Highlight color */
-```
-
-### Modify Content
-
-Edit text directly in `index.html` — all sections are clearly labeled.
-
-## 🚀 Deployment
-
-The website is automatically hosted on GitHub Pages. Any changes pushed to the `main` branch will be live within seconds.
+---
 
 ## 📧 Contact
-Direct email contact is provided via `velorasquad.ai@gmail.com` with one-click email client launch and clipboard copy.
 
-## 📱 Mobile Responsive
+Direct email: **velorasquad.ai@gmail.com**
 
-The website is fully responsive:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (480px - 767px)
-- Mobile Small (<480px)
-
-## 🎉 Future Enhancements
-
-- [ ] Blog section
-- [ ] Team member profiles
-- [ ] Case studies
-- [ ] Testimonials
-- [ ] Dark mode toggle
-- [ ] Multi-language support
-- [ ] Email integration
+---
 
 ## 📄 License
 
 © 2024 Velora Squad. All rights reserved.
-
----
-
-**Built with ❤️ by Velora Squad**
